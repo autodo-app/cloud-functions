@@ -6,16 +6,6 @@ service cloud.firestore {
       match /{documentID=**} {
      		allow read, write: if request.auth.uid == userID;
       }
-    	// match /repeats/{repeatID=**} {
-    	// allow read, write: if request.auth.uid == userID;
-    	// // allow read,write: if true;
-    	// }
-    	// match /todos/{todoID=**} {
-    	// allow read, write: if request.auth.uid == userID;
-    	// }
-    	// match /refuelings/{refuelingID=**} {
-    	// allow read, write: if request.auth.uid == userID;
-    	// }
     }
   }
 }
